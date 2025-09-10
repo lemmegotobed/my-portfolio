@@ -311,7 +311,7 @@ export default function App() {
                         </div>
                         <div>
                           <div className="tt-item-name">Canva</div>
-                          <div className="tt-item-desc">Graphic Design &amp; Marketing</div>
+                          <div className="tt-item-desc">Graphic Design</div>
                         </div>
                       </div>
                       <span className="tt-badge tt-badge--advanced">Advanced</span>
@@ -400,7 +400,7 @@ export default function App() {
                           <div className="tt-item-desc">Containerization Platform</div>
                         </div>
                       </div>
-                      <span className="tt-badge tt-badge--intermediate">Intermediate</span>
+                      <span className="tt-badge tt-badge--begin">Beginner</span>
                     </li>
 
                     <li className="tt-item">
@@ -610,8 +610,8 @@ export default function App() {
             <div className="content">
               <h3>VUP!</h3>
               <p>
-                Senoir Project - A community web app to find activity partners and join real-life events.
-                Create or join activities, chat real-time with others, and manage schedules with an integrated calendar and others feature
+                Senior Project - A community web app to find activity partners and join real-life events.
+                Create or join activities, chat real-time with others, and manage schedules with an integrated calendar and other features
               </p>
               <div className="tags">
                 <span className="chip">Django</span>
@@ -678,7 +678,7 @@ export default function App() {
               <h3>My Portfolio</h3>
               <p>
                 A personal portfolio website built with React to showcase projects, 
-                experiences, and skills, deployed on Firebase for fast and reliable hosting
+                experiences, and skills, deployed on Firebase for fast and reliable deployment/hosting
               </p>
               <div className="tags">
                 <span className="chip">React</span>
@@ -710,7 +710,7 @@ export default function App() {
           <div className="content">
             <h3>IceBreakerCard</h3>
             <p>
-              A Flutter app that randomly generates behavioral questions to start conversations and get to know each other better. Ideal for playing with friends or as a group activity
+            A Flutter app that randomly generates fun and thoughtful questions to spark conversations and help people get to know each other better. Ideal for playing with friends or as a group activity
             </p>  
             <div className="tags">
               <span className="chip">Flutter</span>
@@ -787,12 +787,15 @@ export default function App() {
                 <a className="xp-company">Ubon Ratchathani University</a>
 
                 <p className="xp-desc">
-                   Assisted students in understanding MongoDB concepts such as collections, queries, and indexing. 
-                   Provided guidance during lab sessions, evaluated assignments, and supported lecturers in delivering course materials.
+                   <li>Assisted students in understanding core database concepts including MongoDB, SQL, and indexing</li>
+                   <li>Provided guidance during lab sessions and supported hands-on exercises</li>
+                   <li>Evaluated assignments and provided constructive feedback to enhance learning</li>
+                   <li>Collaborated with lecturers to prepare and deliver course materials effectively</li>
                 </p>
 
                 <div className="xp-tags">
                 <span className="xp-chip">MongoDB</span>
+                <span className="xp-chip">NoSQL</span>
                 <span className="xp-chip">Database Systems</span>
                 <span className="xp-chip">Mentoring</span>
                 </div>
@@ -810,9 +813,8 @@ export default function App() {
             <div class="content">
               <h3>The 27th National Software Contest (NSC 2025)</h3>
               <p>
-                Submitted project <em>VUP!</em>, advanced to the second round and received a development grant. 
-                Worked as the sole developer, handling the entire process including design, development, and testing.
-              </p>
+                Led the development of the VUP! project for the 27th National Software Contest, advancing to the second round and securing a development grant. Managed all stages of the project, from design and development to testing, receiving commendations for innovation and functionality
+                </p>
             </div>
           </article>
 

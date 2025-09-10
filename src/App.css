@@ -737,7 +737,7 @@ body {
 .card-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px
+  gap:20px
 }
 
 
@@ -1466,11 +1466,6 @@ footer .social-links a {
 
 
 
-@media (max-width: 640px) {
-  .activity-grid {
-    grid-template-columns: 1fr; 
-  }
-}
 
 
 @media (max-width: 1024px) { 
@@ -1586,9 +1581,21 @@ footer .social-links a {
     padding: 6px 8px;
   }
 
+  .activity-grid {
+    grid-template-columns: 1fr; 
+    gap: 5px; 
+  }
 
 }
 
 @media (max-width:900px){
-  .card-grid{grid-template-columns:1fr}
+  .card-grid{
+    grid-template-columns:1fr;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr; 
+    gap: 5px; 
+  }
+
 }

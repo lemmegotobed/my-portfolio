@@ -394,6 +394,19 @@ export default function App() {
                     <li className="tt-item">
                       <div className="tt-item-main tt-item-with-icon">
                         <div className="tt-icon">
+                          <img src={require('./assets/flutter.png')} alt="Flutter" />
+                        </div>
+                        <div>
+                          <div className="tt-item-name">Flutter</div>
+                          <div className="tt-item-desc">Cross-Platform Mobile Development</div>
+                        </div>
+                      </div>
+                      <span className="tt-badge tt-badge--intermediate">Intermediate</span>
+                    </li>
+
+                    <li className="tt-item">
+                      <div className="tt-item-main tt-item-with-icon">
+                        <div className="tt-icon">
                           <img src={require('./assets/docker.png')} alt="Docker" />
                         </div>
                         <div>
@@ -404,18 +417,6 @@ export default function App() {
                       <span className="tt-badge tt-badge--begin">Beginner</span>
                     </li>
 
-                    <li className="tt-item">
-                      <div className="tt-item-main tt-item-with-icon">
-                        <div className="tt-icon">
-                          <img src={require('./assets/flutter.png')} alt="Flutter" />
-                        </div>
-                        <div>
-                          <div className="tt-item-name">Flutter</div>
-                          <div className="tt-item-desc">Cross-Platform Mobile Development</div>
-                        </div>
-                      </div>
-                      <span className="tt-badge tt-badge--begin">Beginner</span>
-                    </li>
 
                   </ul>
                 </article>

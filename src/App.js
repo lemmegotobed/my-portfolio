@@ -1,47 +1,38 @@
-// import React from 'react';
 import './App.css'; 
-// import { Button } from './components/Button';
-import cardImage from './assets/card2.png';
+import cardImage from './assets/card.png';
 import heroImage from "./assets/port2.png";
 
-// ฟอนต์อังกฤษ/ละติน
-import "@fontsource/luckiest-guy";      // 400
-import "@fontsource/rubik-dirt";        // 400
-
-// ฟอนต์ไทย (เลือกน้ำหนักที่ต้องการ)
-import "@fontsource/mali/700.css";      // หนา
-import "@fontsource/itim/400.css";      // ปกติ
+import "@fontsource/luckiest-guy";      
+import "@fontsource/rubik-dirt";       
+import "@fontsource/mali/700.css";      
+import "@fontsource/itim/400.css";      
 
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const [active, setActive] = useState("home"); // สถานะ active ที่จะเก็บข้อมูลว่า section ไหนที่กำลังถูกเลื่อนผ่านมา
+  const [active, setActive] = useState("home"); // สถานะ active 
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    // การตั้งค่า IntersectionObserver เพื่อตรวจสอบการแสดงผลของแต่ละ section
     const sections = document.querySelectorAll("section[id]");
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActive(entry.target.id); // เปลี่ยนแปลงสถานะ active เมื่อ section ที่กำหนดถูกเลื่อนมาถึง
+            setActive(entry.target.id); 
           }
         });
       },
-      { threshold: 0.6 } // เริ่มตรวจจับเมื่อ 60% ของ section แสดงบนหน้าจอ
+      { threshold: 0.6 } 
     );
 
-    sections.forEach((sec) => observer.observe(sec)); // ให้ observer ตรวจจับ section ทั้งหมด
-    return () => observer.disconnect(); // ทำความสะอาดเมื่อ component ถูก unmount
+    sections.forEach((sec) => observer.observe(sec));
+    return () => observer.disconnect(); 
   }, []);
-
-
 
   return (
     <div className="App">
-      {/* Navbar */}
       <header className="header">
         <nav className="nav-container">
           <ul className="nav-links">
@@ -74,12 +65,6 @@ export default function App() {
                 <i className="fas fa-briefcase"></i> Experience
               </a>
             </li>
-
-            {/* <li>
-              <a href="#contact" className={active === "contact" ? "active" : ""}>
-                <i className="fas fa-envelope"></i> Contact
-              </a>
-            </li> */}
           </ul>
         </nav>
       </header>
@@ -94,8 +79,6 @@ export default function App() {
 
 
       <section id="about" className="about">
-        {/* <div className="floating-ball" style={{ top: '105%', left: '5%' }}></div>
-        <div className="floating-ball" style={{ top: '70%', left: '85%' }}></div> */}
         <div className="about-section">
           <h2 className="about-title">WHO I AM ?</h2>
           <p className="about-intro">
@@ -103,15 +86,12 @@ export default function App() {
         </div>
         
         <div className="about-layout">
-          {/* ซ้าย: รูปโปรไฟล์ */}
           <div className="about-photo">
             <img src={cardImage} alt="Profile" className="slide-in-left" />
           </div>
 
 
           <div className="about-right">
-            
-            {/* <p className="about-desc">คำอธิบายสั้น ๆ …</p> */}
 
             <div className="about-grid">
               <div className="about-card">
@@ -199,17 +179,11 @@ export default function App() {
 
       <section id="skills" className="sf">
         <h2 className="tt-title">Skills &amp; Technologies</h2>
-        {/* <p className="tt-sub">
-          Industry-standard tools and cutting-edge technologies that power my workflow.
-        </p>
-        <p className="tt-sub">Tap a pill to filter the view.</p> */}
 
-        {/* --- ตัวควบคุม (ต้องอยู่ก่อนกริด) --- */}
         <input id="sf-hard"   type="radio" name="sf-cat" defaultChecked className="sf-ctrl" />
         <input id="sf-soft"   type="radio" name="sf-cat" className="sf-ctrl" />
         <input id="sf-tools"  type="radio" name="sf-cat" className="sf-ctrl" />
 
-        {/* --- ปุ่มกรอง --- */}
         <div className="sf-pills" role="tablist" aria-label="Skill groups">
           <label className="sf-pill" htmlFor="sf-hard"><i className="fas fa-code" /> Hard Skills</label>
           <label className="sf-pill" htmlFor="sf-soft"><i className="fas fa-user-friends" /> Soft Skills</label>
@@ -217,12 +191,7 @@ export default function App() {
         </div>
 
         <div className="sf-grid">
-
-          {/* Hard */}
           <div className="sf-panel" data-cat="hard">
-    
-
-    
             <div className="soft-skills-grid">
               <div className="skill-card">
                 <div className="icon-circle">
@@ -232,9 +201,6 @@ export default function App() {
                 <p className='soft-subtitle' style={{ color: '#78889cff', fontWeight: '200'}}>
                   Wireframing, Prototyping, UX Research, Persona & Usability Testing
                 </p>
-                {/* <p className='soft-subtitle' style={{ color: '#ffffffff', fontWeight: '200'}}>
-                  UX Research, Persona Creation & Usability Testing
-                </p> */}
               </div>
 
               <div className="skill-card">
@@ -268,14 +234,9 @@ export default function App() {
                 </p>
               </div>
 
-
-              {/* <div className="skill-card"><i className="fas fa-mobile-alt" /> <p>Mobile App Development</p></div>
-              <div className="skill-card"><i className="fas fa-paint-brush" /> <p>UI/UX Design</p></div>
-              <div className="skill-card"><i className="fas fa-cloud" /> <p>Cloud Computing</p></div> */}
             </div>
           </div>
 
-          {/* Soft */}
           <div className="sf-panel" data-cat="soft">
             <div className="skills-grid">
               <div className="skill-card">
@@ -322,13 +283,10 @@ export default function App() {
             </div>
           </div>
 
-          {/* Tools */}
           <div className="sf-panel" data-cat="tools">
             <div className="tt-grid">
-                {/* Design Tools */}
                 <article className="tt-card">
                   <header className="tt-card-head">
-                    {/* <span className="tt-head-icon"><i class="fa-solid fa-pen-nib"></i></span> */}
                     <h3 className="tt-head-title">Design & Collaboration</h3>
                   </header>
 
@@ -387,10 +345,8 @@ export default function App() {
                   </ul>
                 </article>
 
-                {/* Development Tools */}
                 <article className="tt-card">
                   <header className="tt-card-head">
-                    {/* <span className="tt-head-icon"><i class="fa-solid fa-code"></i></span> */}
                     <h3 className="tt-head-title">Development Tools</h3>
                   </header>
 
@@ -628,35 +584,21 @@ export default function App() {
                   </ul>
                 </article>
               </div>
-              {/* <div className="language-tags">
-                <p style={{ fontSize:'14px', fontWeight: '600', color: '#111827'}}>Languages : </p>
-                <span className="tag" style={{ backgroundColor: '#FFF2D6', color: '#111827'}}>HTML</span>
-                <span className="tag" style={{ backgroundColor: '#e5ffd6ff', color: '#111827'}}>CSS</span>
-                <span className="tag" style={{ backgroundColor: '#d6f5ffff', color: '#111827'}}>JavaScript</span>
-                <span className="tag" style={{ backgroundColor: '#ffd6ffff', color: '#111827'}}>Python</span>
-                <span className="tag" style={{ backgroundColor: '#ffd6d9ff', color: '#111827'}}>Dart</span>
-              </div> */}
-            
           </div>
 
         </div>
       </section>
 
 
-
-
         <section id="projects" className="projects-section">
-          
         <h2 className="pf-title">Projects</h2>
         <p className="about-intro"  style={{ fontWeight: 100,marginTop: "-10px"}}>
           Sample projects I designed and developed, showcasing my UX/UI and programming skills
         </p>
         
-
         <div className="card-grid">
           <article className="project-card">
             <div className="media slideshow">
-              {/* วางรูปทุกอันไว้ในนี้เลย */}
               <img src="/images/vup/6.png" alt="Project 1" />
               <img src="/images/vup/3.png" alt="Project 2" />
               <img src="/images/vup/4.png" alt="Project 3" />
@@ -679,15 +621,12 @@ export default function App() {
                 <span className="chip">WebSockets</span>
                 <span className="chip">RESTful APIs</span>
                 <span className="chip">MySQL</span>
-                {/* <span className="chip">Chat real-time</span> */}
-                {/* <span className="chip">Fullcalendar</span> */}
-                {/* <span className="chip">Figma</span> */}
               </div>
               <div className="project-actions">
               <a href="https://github.com/lemmegotobed/VUP_Project" target="_blank" rel="noopener noreferrer" className="btn-code">
                 <i className="fab fa-github"></i> Code
               </a>
-              <a href="https://drive.google.com/file/d/1u9REnurvcWuffB6KKnwct4hSE_SzNLP-/view" target="_blank" rel="noopener noreferrer" className="btn-demo">
+              <a href="https://drive.google.com/file/d/1CYbZKAZas6-C9I4Hmu-3OEDpvF5e4n_q/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-demo">
                 <i className="fas fa-external-link-alt"></i> Demo
               </a>
             </div>
@@ -697,7 +636,6 @@ export default function App() {
 
           <article className="project-card">
             <div className="media slideshow">
-              {/* วางรูปทุกอันไว้ในนี้เลย */}
               <img src="/images/fishtank/fishtank.png" alt="Project 1" />
               <img src="/images/fishtank/3.png"  alt="Project 2" />
               <img src="/images/fishtank/4.png"  alt="Project 3" />
@@ -711,7 +649,7 @@ export default function App() {
             <h3>FishTank</h3>
             <p>
               A virtual "fish tank" Web application to showcase different fish species, 
-              displaying details in an interactive way as if you had your own digital aquarium.
+              displaying details in an interactive way as if you had your own digital aquarium
             </p>
             <div className="tags">
                 <span className="chip">Django</span>
@@ -732,7 +670,7 @@ export default function App() {
 
           <article className="project-card" >
             <div className="media">
-              <img src="/images/port.png" alt="Project 2" />
+              <img src="/images/p.png" alt="Project 2" />
               <span className="badge badge-left">Website</span>
               <span className="badge badge-right">2025</span>
             </div>
@@ -740,7 +678,7 @@ export default function App() {
               <h3>My Portfolio</h3>
               <p>
                 A personal portfolio website built with React to showcase projects, 
-                experiences, and skills, deployed on Firebase for fast and reliable hosting.
+                experiences, and skills, deployed on Firebase for fast and reliable hosting
               </p>
               <div className="tags">
                 <span className="chip">React</span>
@@ -749,42 +687,50 @@ export default function App() {
                 <span className="chip">Firebase</span>
               </div>
               <div className="project-actions">
-              <a href="https://github.com/Pa2k/fishtank-finally" target="_blank" rel="noopener noreferrer" className="btn-code">
+              <a href="https://github.com/lemmegotobed/my-portfolio" target="_blank" rel="noopener noreferrer" className="btn-code">
                 <i className="fab fa-github"></i> Code
               </a>
-              <a href="https://drive.google.com/file/d/1u9REnurvcWuffB6KKnwct4hSE_SzNLP-/view" target="_blank" rel="noopener noreferrer" className="btn-demo">
+              <a href="https://onanong-en19.web.app/" target="_blank" rel="noopener noreferrer" className="btn-demo">
                 <i className="fas fa-external-link-alt"></i> Demo
               </a>
             </div>
             </div>
           </article>
 
-          
+         <article className="project-card">
+         <div className="media slideshow">
+              <img src="/images/icecard/1.png" alt="Project 1" />
+              <img src="/images/icecard/2.png"  alt="Project 2" />
+              <img src="/images/icecard/3.png"  alt="Project 3" />
+              <img src="/images/icecard/4.png"  alt="Project 4" />
 
-          <article className="project-card">
-            <div className="media">
-              <img src="/images/financeflow.jpg" alt="FinanceFlow – Dashboard Redesign" />
-              <span className="badge badge-left">Web Design</span>
-              <span className="badge badge-right">2024</span>
+              <span className="badge badge-left">Flutter App</span>
+              <span className="badge badge-right">2025</span>
             </div>
-            <div className="content">
-              <h3>FinanceFlow – Dashboard Redesign</h3>
-              <p>Redesigned a complex financial dashboard focusing on data visualization and user experience improvements.</p>
-              <div className="tags">
-                <span className="chip">Figma</span>
-                <span className="chip">Data Visualization</span>
-                <span className="chip">Responsive Design</span>
-              </div>
-              <div className="project-actions">
-              <a href="https://github.com/Pa2k/fishtank-finally" target="_blank" rel="noopener noreferrer" className="btn-code">
+          <div className="content">
+            <h3>IceBreakerCard</h3>
+            <p>
+              A Flutter app that randomly generates behavioral questions to start conversations and get to know each other better. Ideal for playing with friends or as a group activity
+            </p>  
+            <div className="tags">
+              <span className="chip">Flutter</span>
+              <span className="chip">Random</span>
+              <span className="chip">GetStorage</span>
+              <span className="chip">Share Plus</span>
+              <span className="chip">Animation</span>
+
+            </div>
+            <div className="project-actions">
+              <a href="https://github.com/lemmegotobed/IceBreakerCard" target="_blank" rel="noopener noreferrer" className="btn-code">
                 <i className="fab fa-github"></i> Code
               </a>
-              <a href="https://drive.google.com/file/d/1u9REnurvcWuffB6KKnwct4hSE_SzNLP-/view" target="_blank" rel="noopener noreferrer" className="btn-demo">
+              <a href="https://drive.google.com/file/d/1DcUG8zbEuyvZMX69_Zn3AH931QTfkR2n/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-demo">
                 <i className="fas fa-external-link-alt"></i> Demo
               </a>
             </div>
-            </div>
-          </article>
+          </div>
+        </article>
+
         </div>
       </section>
 
@@ -802,12 +748,12 @@ export default function App() {
                     <i className="fa-solid fa-briefcase"></i> Internship
                   </span>
                   <span className="xp-date">
-                    <i className="fa-regular fa-calendar"></i> May – July 2024
+                    <i className="fa-regular fa-calendar"></i> July  - May 2025
                   </span>
                 </header>
 
                 <h3 className="xp-role">UX/UI Design Intern</h3>
-                <a href="#" className="xp-company">Mukdahan Technology College</a>
+                <a className="xp-company">Mukdahan Technology College</a>
 
                 <p className="xp-desc">
                   
@@ -826,7 +772,7 @@ export default function App() {
               </div>
 
           <div className="timeline-item">
-            <div className="timeline-dot green"></div>
+            <div className="timeline-dot blue"></div>
               <article className="xp-card">
                 <header className="xp-head">
                   <span className="xp-badge xp-badge--blue">
@@ -838,7 +784,7 @@ export default function App() {
                 </header>
 
                 <h3 className="xp-role">Teaching Assistant – Database Systems</h3>
-                <p className="xp-company">Ubon Ratchathani University</p>
+                <a className="xp-company">Ubon Ratchathani University</a>
 
                 <p className="xp-desc">
                    Assisted students in understanding MongoDB concepts such as collections, queries, and indexing. 
@@ -862,7 +808,7 @@ export default function App() {
               <span class="activity-label label-right">2025</span>
             </div>
             <div class="content">
-              <h3>National Software Contest (NSC 2025)</h3>
+              <h3>The 27th National Software Contest (NSC 2025)</h3>
               <p>
                 Submitted project <em>VUP!</em>, advanced to the second round and received a development grant. 
                 Worked as the sole developer, handling the entire process including design, development, and testing.
@@ -907,7 +853,7 @@ export default function App() {
             <div class="media">
               <img src="/images/hackathon.jpg" alt="UBU Hackathon 2024" />
               <span class="activity-label label-left">Hackathon</span>
-              <span class="activity-label label-right">2024</span>
+              <span class="activity-label label-right">2025</span>
             </div>
             <div class="content">
               <h3>UBU Hackathon 2024</h3>
@@ -918,31 +864,12 @@ export default function App() {
             </div>
           </article>
 
-          <article class="activity-card">
-            <div class="media">
-              <img src="/images/staff.jpg" alt="Volunteer Activities" />
-              <span class="activity-label label-left">Volunteer</span>
-              <span class="activity-label label-right">2024</span>
-            </div>
-            <div class="content">
-              <h3>School Outreach – Tech & Games</h3>
-              {/* <p>
-                Participated in a volunteer program at a local school, providing basic technology
-                knowledge to students and organizing recreational games to promote teamwork and engagement.
-              </p> */}
-              <p>
-                Participated in a volunteer program at Pathum Witthayakorn School, providing students 
-                with basic technology knowledge and organizing recreational games to enhance 
-                communication and teamwork skills
-              </p>
-            </div>
-          </article>
 
           <article class="activity-card">
           <div class="media">
             <img src="/images/Information_literacy.png" alt="Information Literacy Training" />
             <span class="activity-label label-left">Training</span>
-            <span class="activity-label label-right">2024</span>
+            <span class="activity-label label-right">2025</span>
           </div>
           <div class="content">
             <h3>Information Literacy Training</h3>
@@ -953,29 +880,25 @@ export default function App() {
           </div>
         </article>
 
-
-{/* <article class="activity-card">
-  <div class="media">
-    <img src="/images/foodstall.jpg" alt="Food Stall" />
-    <span class="activity-label label-left">Volunteer</span>
-    <span class="activity-label label-right">2023</span>
-  </div>
-  <div class="content">
-    <h3>โรงทานสโมสรวิทยาศาสตร์</h3>
-    <p>ช่วยจัดทำโรงทานและบริการในงานของคณะ.</p>
-  </div>
-</article> */}
-
+        <article class="activity-card">
+            <div class="media">
+              <img src="/images/staff.jpg" alt="Volunteer Activities" />
+              <span class="activity-label label-left">Volunteer</span>
+              <span class="activity-label label-right">2024</span>
+            </div>
+            <div class="content">
+              <h3>School Outreach – Tech & Games</h3>
+              <p>
+                Participated in a volunteer program at Pathum Witthayakorn School, providing students 
+                with basic technology knowledge and organizing recreational games to enhance 
+                communication and teamwork skills
+              </p>
+            </div>
+          </article>
         </div>
-
-
         
       </section>
-
-    
   
-
-      {/* Footer */}
       <footer>
         <p>&copy; 2025 Onanong Portfolio. Built with ReactJS, JavaScript & Custom CSS.</p>
       </footer>

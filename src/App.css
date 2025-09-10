@@ -30,20 +30,18 @@ body { padding-top: var(--header-offset); } */
   width: max-content;
 }
 
-/* กล่องเมนูแบบ pill */
 .nav-container{
   background: rgba(255,255,255,.88);
   border-radius: 9999px;
-  padding: 12px 10px;
+  padding: 12px 8px;
   box-shadow: 0 8px 24px rgba(0,0,0,.08);
   backdrop-filter: saturate(790%) blur(2px); 
 }
 
-/* เมนูภายใน */
 .nav-links{
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 2px;
   margin: 0;
   padding: 0;
 }
@@ -57,17 +55,15 @@ body { padding-top: var(--header-offset); } */
 }
 .nav-links li a:hover,
 .nav-links li a.active{
-  background: #253964;
+  background: #3b507b;
   color: #fff;
 } 
 
-/* ตอนมีสกอร์ล: เพิ่มความคม/เงา */
  .header.is-scrolled .nav-container{
   background: rgba(255,255,255,.96);
   box-shadow: 0 10px 28px rgba(0,0,0,.12);
 } 
 
-/* CSS Keyframes for Fade In */
  @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -131,22 +127,17 @@ body { padding-top: var(--header-offset); } */
   }
 }
 
-
-
-
-/* สไตล์ของลูกบอล */
 .floating-ball {
   position: absolute;
-  width: 80px; /* ขนาดของลูกบอล */
-  height: 80px;
-  border-radius: 50%; /* ทำให้เป็นวงกลม */
-  background-color: rgba(68, 170, 237, 0.6); /* สีของลูกบอลที่ฟุ้ง */
-  filter: blur(15px); /* ฟุ้งลูกบอลให้เบลอมาก */
-  animation: floatBall 6s ease-in-out infinite; /* การเคลื่อนไหวแบบขึ้นลง */
-  box-shadow: 0 0 40px rgba(28, 228, 246, 0.8); /* เงาฟุ้งของลูกบอล */
+  width: 90px; 
+  height: 90px;
+  border-radius: 50%; 
+  background-color: rgba(97, 182, 240, 0.6); 
+  filter: blur(15px); 
+  animation: floatBall 4s ease-in-out infinite; 
+  box-shadow: 0 0 40px rgba(28, 228, 246, 0.8); 
 }
 
-/* ปรับตำแหน่งและระยะเวลาของการเคลื่อนไหว */
 .floating-ball:nth-child(1) {
   animation-duration: 3s;
   top: 30%;
@@ -158,7 +149,6 @@ body { padding-top: var(--header-offset); } */
   top: 50%;
   left: 40%;
 }
-
 
 .skills-buttons {
   position: absolute;
@@ -204,8 +194,8 @@ body { padding-top: var(--header-offset); } */
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center; /* จัดกลางแนวนอน */
-  align-items: center;     /* จัดกลางแนวตั้ง */
+  justify-content: center; 
+  align-items: center;     
   /* height: 100vh; */
   margin: 0 auto;       
   margin-top: 20px;
@@ -216,31 +206,20 @@ body { padding-top: var(--header-offset); } */
   display: inline-block;
   padding: 6px 14px;
   font-size: 14px;
-  border-radius: 9999px; /* ทำให้เป็น pill */
+  border-radius: 9999px; 
   background-color: #f3f4f6;
   color: #111827;
   font-weight: 500;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   cursor: default;
 }
+
 .language-tags .tag:hover {
   background-color: #111827;
   color: #fff;
   transition: 0.2s;
 }
 
-
-
-
-/* Soft Skills Section */
-
-
-
-
-
-
-/* Additional style can be added for different cards */
-/* style.css */
 .slide-in-left {
   animation: slideInLeft 2s ease forwards;
 }
@@ -259,7 +238,7 @@ body { padding-top: var(--header-offset); } */
 /* Profile Section */
 .profile-section {
   padding: 50px 20px;
-  background-color: #f8fcfd; /* พื้นหลังของ Profile Section */
+  background-color: #f8fcfd; 
   text-align: center;
 }
 
@@ -336,7 +315,6 @@ body { padding-top: var(--header-offset); } */
   margin-bottom: 30px;
 }
 
-/* Tools Category */
 .tools-category {
   margin-bottom: 40px;
 }
@@ -355,7 +333,6 @@ body { padding-top: var(--header-offset); } */
   font-size: 18px;
 }
 
-/* Tools Grid */
 .tools {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -363,7 +340,6 @@ body { padding-top: var(--header-offset); } */
   justify-items: center;
 }
 
-/* Tool Card */
 .tool {
   background-color: #fff;
   padding: 20px;
@@ -371,7 +347,7 @@ body { padding-top: var(--header-offset); } */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  gap: 20px; /* Add space between icon and text */
+  gap: 20px; 
   width: 100%;
   max-width: 350px;
 }
@@ -387,9 +363,6 @@ body { padding-top: var(--header-offset); } */
   color: #555;
   margin-bottom: 10px;
 }
-
-
-
 
 .skill-level {
   padding: 5px 10px;
@@ -413,52 +386,12 @@ body { padding-top: var(--header-offset); } */
 }
 
 
-/* Footer */
-footer {
-  background-color: #111;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-footer p {
-  margin-bottom: 20px;
-}
-
-footer .social-links a {
-  color: white;
-  margin: 0 10px;
-  font-size: 24px;
-  transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-  color: #00bcd4;
-}
-
-/* ====== Theme tokens ====== */
-:root{
-  --bg:#f6f7fb;
-  --card:#ffffff;
-  --text:#0f172a;
-  --muted:#6b7280;
-  --primary:#111827;
-  --border:#e5e7eb;
-  --shadow:0 10px 28px rgba(0,0,0,.08);
-  --radius:16px;
-}
-
 .about{
   padding: 40px 0 80px;
-  /* background-color: #cdebfa; */
-  /* background: linear-gradient(135deg, #cdebfa, #ffffff); */
-  /* background: linear-gradient(180deg, #cdebfa 0%, #a9d8f5 50%, #ffffff 100%); */
-  /* background: radial-gradient(circle at center, #e1b4df 0%, #f5a9e2 10%, #ffffff 40%); */
   border-top: 1px solid rgba(0,0,0,.04);
   border-bottom: 1px solid rgba(0,0,0,.04);
 }
 
-/* ====== About Section ====== */
 .about-layout{
   max-width: 1050px;
   margin: 0 auto;
@@ -469,39 +402,6 @@ footer .social-links a:hover {
   /* background-color: #000000; */
 }
 
-@media (max-width: 768px) {
-  .about-layout {
-    grid-template-columns: 1fr; 
-  }
-
-  .about-photo img {
-    max-width: 250px;  
-    height: auto;
-    margin-right: 30px;
-  }
-
-  .about-photo {
-    display: flex;
-    justify-content: center; 
-    /* background-color: turquoise; */
-  }
-
-  .timeline {
-    /* margin-left: 0px; */
-    margin: 0;
-  }
-
-  .xp-card {
-    /* padding: 22px 26px; */
-    width: auto;
-    max-width: 720px;
-    margin-left: 10px;
-    /* gap: 70px; */
-    /* margin: 10px auto; */
-    margin-top: 20px;
-  }
-
-}
 
 .about-photo img{
   margin-top: -30px;
@@ -552,13 +452,7 @@ footer .social-links a:hover {
   margin-top: 0;
 }
 
-/* .about-desc{
-  color: var(--muted);
-  line-height: 1;
-  margin: 0 0 18px;
-} */
 
-/* การ์ดข้อมูล 2 คอลัมน์ */
 .about-grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -576,9 +470,7 @@ footer .social-links a:hover {
   border-radius: var(--radius);
   padding: 10px 15px;
   box-shadow: var(--shadow);
-  /* transition: transform .15s ease, box-shadow .15s ease; */
   transition: transform .2s ease, box-shadow .2s ease;
-  /* box-shadow: 0 10px 12px rgba(59, 130, 246, 0.25); */
 }
 
 .about-card:hover{
@@ -587,7 +479,6 @@ footer .social-links a:hover {
   box-shadow: 0 10px 22px rgba(59, 130, 246, 0.25);
 }
 
-/* ไอคอนวงกลมเทาอ่อนเหมือนภาพ */
 .about-icon{
   width: 35px; 
   height: 35px;
@@ -614,13 +505,13 @@ footer .social-links a:hover {
 .resume{
   margin-top: 10px;
   border-radius: 12px;
-  padding: 9px 16px;
+  padding: 10px 16px;
   display: inline-flex; align-items: center; gap: 8px;
   text-decoration: none; 
   font-weight: 500;
   box-shadow: var(--shadow);
   transition: transform .15s ease, box-shadow .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
-  background-color: #395a7b;
+  background: #436591;
   color: #fcf9f9;
   font-size: 11px;
 }
@@ -633,13 +524,17 @@ footer .social-links a:hover {
   box-shadow: 0 14px 34px rgba(0,0,0,.12);
 }
 
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --primary:#111827;
+  --border:#e5e7eb;
+  --shadow:0 10px 28px rgba(0,0,0,.08);
+  --radius:16px;
+}
 
-/* ===== prefix: tt- (Tools & Technologies) ===== */
-/* .tt-section{
-  padding: 80px 0px 0px 0px;
-  background: #f8fbff;
-
-} */
 .tt-title{
   /* margin-top: 80px; */
   text-align:center;
@@ -656,25 +551,11 @@ footer .social-links a:hover {
   max-width: 760px;
 }
 
-/* layout */
-
 .tt-item-with-icon {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-/* .tt-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #e5e7eb;
-  background-color: #fff;
-} */
 
 .tt-icon img {
   width: 35px;
@@ -684,9 +565,6 @@ footer .social-links a:hover {
   border: 1px solid #e5e7eb;
 }
 
-
-/* card */
-/* layout */
 .tt-grid {
   max-width: 800px;
   margin: 0 auto;
@@ -695,9 +573,6 @@ footer .social-links a:hover {
   gap: 20px 60px; 
 }
 
-
-
-/* card */
 .tt-card {
   background:#fff;
   border:1px solid #e5e7eb;
@@ -710,8 +585,6 @@ footer .social-links a:hover {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .tt-card-head{
   display:flex; align-items:center; 
@@ -734,7 +607,6 @@ footer .social-links a:hover {
   color:#0f172a;
 }
 
-/* list items */
 .tt-list{ 
   list-style:none; 
   margin: 10px 0 0; 
@@ -744,9 +616,13 @@ footer .social-links a:hover {
 }
 
 .tt-item{
-  display:flex; justify-content:space-between; align-items:center; gap:14px;
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  gap:14px;
   padding: 14px 16px;
-  border:1px solid #eef0f2; border-radius: 14px;
+  border:1px solid #eef0f2; 
+  border-radius: 14px;
   background:#fff;
   box-shadow: 0 4px 14px rgba(0,0,0,.04);
 }
@@ -754,26 +630,35 @@ footer .social-links a:hover {
 .tt-item-name{ font-weight: 800; color:#111827; }
 .tt-item-desc{ color:#667085; font-size: 12px; line-height: 1.45; }
 
-/* badges */
 .tt-badge{
   font-weight: 800; font-size: 12px;
   padding: 6px 10px; border-radius: 10px;
   border:1px solid transparent; white-space: nowrap;
 }
-.tt-badge--advanced{ background:#e9f8ee; color:#0d6b3b; border-color:#bfe7cc; }
-.tt-badge--intermediate{ background:#eaf0ff; color:#2f56cf; border-color:#cfe0ff; }
-.tt-badge--begin{ background:#fff1e8; color:#a24a12; border-color:#ffd9c2; }
+.tt-badge--advanced{ 
+  background:#e9f8ee; 
+  color:#0d6b3b; 
+  border-color:#bfe7cc; 
+}
+.tt-badge--intermediate{ 
+  background:#eaf0ff; 
+  color:#2f56cf; 
+  border-color:#cfe0ff; 
+}
+.tt-badge--begin{ 
+  background:#fff1e8; 
+  color:#a24a12; 
+  border-color:#ffd9c2; 
+}
 
-/* hover */
-.tt-item:hover{ transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,.08); transition: all .15s ease; }
+
+.tt-item:hover{ 
+  transform: translateY(-1px); 
+  box-shadow: 0 8px 20px rgba(0,0,0,.08); 
+  transition: all .15s ease; 
+}
 
 
-
-/* หัวข้อ Interests & chips */
-/* .about-subtitle{
-  margin-top: 80px;
-  font-weight: 700;
-} */
 .chip-row{
   display: flex; flex-wrap: wrap; gap: 8px;
   margin: 8px 0 16px;
@@ -791,40 +676,6 @@ footer .social-links a:hover {
 }
 
 
-/* ====== Responsive ====== */
-@media (max-width: 768px){
-  .about{ 
-    padding: 16px; 
-  }
-
-  .about-grid{ 
-    grid-template-columns: 1fr; 
-  }
-
-  .about-title{
-    font-size: 30px;
-  }
-
-  .about-intro{
-    font-size: 12px;
-    color: #575757;
-    line-height: 1.5;
-    text-align: center;
-    padding: 0px 10px 0px 10px;
-    font-style: italic; 
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
-
-  .about-right{
-    margin-left: 0px;
-  }
-
-
-}
-
-
-
 .see-more-btn {
   background-color: #96cee4;
   color: #fff;
@@ -834,56 +685,13 @@ footer .social-links a:hover {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  margin: 10px auto 0 auto;  /* ใช้ auto ข้างซ้าย-ขวา */
-  display: block; /* ต้องเปลี่ยนเป็น block */
+  margin: 10px auto 0 auto; 
+  display: block; 
 }
-
 
 .see-more-btn:hover {
   background-color: #46679a;
 }
-
-/* .modal-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 16px;
-}
-
-.links {
-  display: flex;
-  gap: 12px;
-  margin: 16px 0;
-}
-
-.link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.link-btn.github {
-  background: #24292e;
-  color: #fff;
-}
-
-.link-btn.github:hover {
-  background: #000;
-}
-
-.link-btn.figma {
-  background: #f24e1e;
-  color: #fff;
-}
-
-.link-btn.figma:hover {
-  background: #c63a11;
-} */
-
 
 .projects-section{
   max-width:1000px;
@@ -905,12 +713,6 @@ footer .social-links a:hover {
   /* background-color: #008c9e; */
 }
 
-/* .pj-header{
-  margin-top: 100px;
-  text-align:center;
-  margin-bottom: 12px;
-} */
-/* Pills */
 .pillbar{
   display:flex;
   justify-content:center;
@@ -952,15 +754,12 @@ footer .social-links a:hover {
   color:#fff;
   border-color:transparent}
 
-/* Grid + Card */
 .card-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px}
 
-@media (max-width:900px){
-  .card-grid{grid-template-columns:1fr}
-}
+
 
 .project-card{
   background:#fff;
@@ -1073,7 +872,6 @@ footer .social-links a:hover {
   color:#0f172a
 }
 
-/* ===== CSS-only FILTER (ผ่าน radio + sibling combinator) ===== */
 .pf #pf-uiux:checked   ~ .card-grid .project-card{display:none}
 .pf #pf-uiux:checked   ~ .card-grid .project-card[data-cat="uiux"]{display:block}
 
@@ -1106,23 +904,22 @@ footer .social-links a:hover {
 }
 
 .btn-code {
-  border: 1.5px solid #2563eb;
-  color: #2563eb;
+  border: 1.5px solid #475d8c;
+  color: #475d8c;
   background: #fff;
 }
 .btn-code:hover {
-  background: #2563eb;
+  background: #475d8c;
   color: #fff;
 }
 
-/* ปุ่ม Demo */
 .btn-demo {
-  background: linear-gradient(90deg, #2563eb, #9333ea);
+  background: linear-gradient(90deg, #475d8c, #5e91b7);
   color: #fff;
   border: none;
 }
 .btn-demo:hover {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 
@@ -1269,117 +1066,6 @@ footer .social-links a:hover {
    color: #000000;
   }
 
-@media (max-width: 1024px) {   /* Tablet */
-  .soft-skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr); 
-  }
-
-  .nav-links{
-    gap: 5px;
-  }
-
-  .tt-grid {
-    justify-content: center; 
-    gap: 15px;
-  }
-
-
- .tt-card {
-  width: 320px;       
-  margin: 0 auto;     
-  /* font-size: 10px; */
-}
-
-.about-layout{
-  gap: 20px;
-}
-
-.about-right{
-  /* gap: 12px; */
-  max-width: 550px;
-}
-
-.about-value{
-  font-size: 12px;
-}
-}
-
-@media (max-width: 768px) {
-  .soft-skills-grid {
-    grid-template-columns: 1fr; /* Mobile */
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-
-  .skill-card {
-  width: auto;
-  /* padding: 20px 0px; */
-  font-size: 12px;
-  }
-
-  /* .tt-grid{ 
-    grid-template-columns: 1fr; 
-    max-width: auto;
-  }  */
-  
-
-  .tt-item-name{font-size: 12px; font-weight: 800; color:#111827; }
-  .tt-item-desc{ color:#667085; font-size: 10px; line-height: 1.45; }
-
-  .tt-head-title{
-    margin:0; 
-    font-size: 16px; 
-    font-weight: 800; 
-    color:#0f172a;
-  }
-
-  .tt-badge{
-    font-weight: 800; font-size: 10px;
-    padding: 6px 10px; border-radius: 10px;
-    border:1px solid transparent; white-space: nowrap;
-  }
-
-
-
-}
-
-/* มือถือ */
-@media (max-width: 520px){
-  .hero.hero-center{ padding: 18px 12px; }
-  .hero-img{ border-radius: 14px; }
-
-  /* .sf-pills {
-     margin: 0 0 0 -70;
-  } */
-
-  .sf-pills{
-    gap:0px; 
-    margin:0px auto 20px; 
-    /* width:max-content; */
-  }
-  .sf-pill{
-    font-size: 10px;
-  }
-
-  .tt-title{
-    font-size: 25px;
-  }
-
-  .skill-card{
-    max-width: 800px;
-  }
-
-  .tt-card{
-    margin: 0;
-  }
-}
-
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -1458,16 +1144,16 @@ footer .social-links a:hover {
 }
 
 .timeline-dot.blue {
-  background-color: #3b82f6;
+  background-color: #3670cc;
 }
 
-.timeline-dot.green {
+/* .timeline-dot.green {
   background-color: #10b981;
 }
 
 .timeline-dot.purple {
   background-color: #8b5cf6;
-}
+} */
 
 .experience {
   display: flex;
@@ -1517,19 +1203,19 @@ footer .social-links a:hover {
   padding: 6px 12px;
   border-radius: 10px;
 }
+
 .xp-badge--blue {
-  background: #e0e7ff;
-  color: #1d4ed8;
+  background: #e0f1ff;
+  color: #4277b4;
 }
 .xp-badge i {
   font-size: 14px;
 }
 
-/* Date */
 .xp-date {
   color: #6b7280;
-  font-size: 14px;
-  margin-left: auto; /* ดันไปขวาสุด */
+  font-size: 12px;
+  margin-left: auto; 
 }
 .xp-date i {
   margin-right: 6px;
@@ -1544,7 +1230,7 @@ footer .social-links a:hover {
 }
 .xp-company {
   display: inline-block;
-  color: #7c3aed;
+  color: #2c4f9a;
   text-decoration: none;
   font-weight: 600;
   margin-bottom: 12px;
@@ -1568,12 +1254,12 @@ footer .social-links a:hover {
   gap: 8px;
 }
 .xp-chip {
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 9999px;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 400;
+  font-size: 10px;
   color: #1f2937;
-  background: #f3f4f6;
+  background: #edf0f5;
   border: 1px solid #e5e7eb;
 }
 
@@ -1585,18 +1271,6 @@ footer .social-links a:hover {
   max-width: 950px;
 }
 
-/* ให้ responsive */
-@media (max-width: 1024px) {
-  .activity-grid {
-    grid-template-columns: repeat(2, 1fr); /* Tablet = 2 คอลัมน์ */
-  }
-}
-
-@media (max-width: 640px) {
-  .activity-grid {
-    grid-template-columns: 1fr; /* Mobile = 1 คอลัมน์ */
-  }
-}
 
 /* Activity Card */
 .activity-card {
@@ -1624,7 +1298,6 @@ footer .social-links a:hover {
   border-bottom: 1px solid #eee;
 }
 
-/* ป้ายบนรูป */
 .activity-label {
   position: absolute;
   top: 12px;
@@ -1637,12 +1310,12 @@ footer .social-links a:hover {
 
 .label-left {
   left: 12px;
-  background: #3b82f6; /* Blue */
+  background:rgba(17,24,39,.85)
 }
 
 .label-right {
   right: 12px;
-  background: #10b981; /* Green */
+  background:rgba(17,24,39,.85)
 }
 
 .activity-card .content {
@@ -1676,3 +1349,251 @@ footer .social-links a:hover {
   border-radius: 9999px;
 } */
 
+footer {
+  background: linear-gradient(90deg, #475d8c, #5e91b7);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 20px;
+}
+
+footer .social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+/* footer .social-links a:hover {
+  color: #00bcd4;
+} */
+
+
+
+
+
+
+@media (max-width: 768px){
+  .about{ 
+    padding: 16px; 
+  }
+  
+
+  .about-grid{ 
+    grid-template-columns: 1fr; 
+    gap: 10px;
+    margin-top: -35px;
+  }
+
+  .about-title{
+    font-size: 30px;
+  }
+
+  .about-intro{
+    font-size: 12px;
+    color: #575757;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    font-style: italic; 
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .about-right{
+    margin-left: 0px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr; 
+  }
+
+  .about-photo img {
+    max-width: 250px;  
+    height: auto;
+    margin-right: 30px;
+  }
+
+  .about-photo {
+    display: flex;
+    justify-content: center; 
+    /* background-color: turquoise; */
+  }
+
+  .timeline {
+    /* margin-left: 0px; */
+    margin: 0;
+  }
+
+  .xp-card {
+    /* padding: 22px 26px; */
+    width: auto;
+    max-width: 720px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .skill-card {
+  width: auto;
+  /* padding: 20px 0px; */
+  font-size: 12px;
+  }
+
+  .tt-grid{ 
+    grid-template-columns: 1fr; 
+    max-width: auto;
+  } 
+  
+  .sf-pills{
+    margin:20px ; 
+  }
+
+  .tt-title{
+    margin-bottom: 10px;
+  }
+
+  .tt-item-name{font-size: 12px; font-weight: 800; color:#111827; }
+  .tt-item-desc{ color:#667085; font-size: 10px; line-height: 1.45; }
+
+  .tt-head-title{
+    margin:0; 
+    font-size: 16px; 
+    font-weight: 800; 
+    color:#0f172a;
+  }
+
+  .tt-badge{
+    font-weight: 800; font-size: 10px;
+    padding: 6px 10px; border-radius: 10px;
+    border:1px solid transparent; white-space: nowrap;
+  }
+
+ 
+
+}
+
+
+
+@media (max-width: 640px) {
+  .activity-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+@media (max-width: 1024px) { 
+  
+  .activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .nav-links{
+    gap: 5px;
+  }
+
+  .tt-grid {
+    justify-content: center; 
+    gap: 15px;
+  }
+
+ .tt-card {
+  width: 320px;       
+  margin: 0 auto;     
+  /* font-size: 10px; */
+  }
+
+  .about-layout{
+    gap: 20px;
+  }
+
+  .about-right{
+    /* gap: 12px; */
+    max-width: 550px;
+  }
+
+  .about-value{
+    font-size: 12px;
+  }
+}
+
+
+
+@media (max-width: 520px){
+  .hero.hero-center{ padding: 18px 12px; }
+  .hero-img{ border-radius: 14px; }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .skill-card {
+  width: auto;
+  /* padding: 20px 0px; */
+  font-size: 12px;
+  }
+
+  .tt-grid{ 
+    grid-template-columns: 1fr; 
+    max-width: auto;
+  } 
+  
+
+  /* .sf-pills {
+     margin: 0 0 0 -70;
+  } */
+
+  .sf-pills{
+    gap:0px; 
+    margin:0px auto 20px; 
+    /* width:max-content; */
+  }
+  
+  .sf-pill{
+    font-size: 10px;
+  }
+
+  .tt-title{
+    font-size: 25px;
+  }
+
+  .skill-card{
+    max-width: 800px;
+  }
+
+  .tt-card{
+    margin: 0;
+  }
+
+  .about-grid{ 
+    grid-template-columns: 1fr; 
+    gap: 10px;
+    margin-top: -35px;
+  }
+}
+
+/* @media (max-width:900px){
+  .card-grid{grid-template-columns:1fr}
+} */

@@ -269,17 +269,18 @@ export default function App() {
 
               <div className="skill-card">
                 <div className="icon-circle">
-                  <i className="fas fa-bullseye" />
+                  <i className="fas fa-search" />
                 </div>
-                 <p>Goal-Oriented</p>
+                <p>Attention to Detail</p>
               </div>
 
               <div className="skill-card">
                 <div className="icon-circle">
-                  <i className="fas fa-bolt" />
+                  <i className="fas fa-chart-line" />
                 </div>
-                 <p>Quick Learning</p>
+                <p>Analytical Thinking</p>
               </div>
+
             </div>
           </div>
 

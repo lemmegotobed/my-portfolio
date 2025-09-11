@@ -82,8 +82,9 @@ export default function App() {
         <div className="about-section">
           <h2 className="about-title">WHO I AM ?</h2>
           <p className="about-intro">
-           I'm a fourth-year Data Science and Software Innovation student with interests in UX/UI design and software development. Skilled in both design and development, I'm seeking an internship as a UX/UI Designer, Frontend Developer, Web Developer, or other related roles to gain real-world experience and further improve my skills</p>
-        </div>
+            I'm Fourth-year Data Science and Software Innovation student with strong interests in UX/UI design and software development. Gained practical experience and foundational skills through projects using Figma, prototyping, Django, React, Flutter, HTML, CSS, JavaScript, WebSocket, RESTful APIs, and database management. Seeking an internship as UX/UI Designer, Frontend, Web Developer or other related roles to apply knowledge to gain real-world experience, apply my skills, and create user-centered digital solutions
+          </p>
+           </div>
         
         <div className="about-layout">
           <div className="about-photo">

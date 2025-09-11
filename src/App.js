@@ -168,9 +168,9 @@ export default function App() {
               </div>
 
             </div>
-            <a className="resume" href="/files/onanong_resume.pdf" download="Onanong_Resume.pdf">
+            {/* <a className="resume" href="/files/onanong_resume.pdf" download="Onanong_Resume.pdf">
                 <i className="fas fa-download" /> Download My Resume
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -381,11 +381,11 @@ export default function App() {
                     <li className="tt-item">
                       <div className="tt-item-main tt-item-with-icon">
                         <div className="tt-icon">
-                          <img src={require('./assets/firebase.png')} alt="Firebase" />
+                          <img src={require('./assets/flutter.png')} alt="Flutter" />
                         </div>
                         <div>
-                          <div className="tt-item-name">Firebase</div>
-                          <div className="tt-item-desc">Hosting & Backend Platform</div>
+                          <div className="tt-item-name">Flutter</div>
+                          <div className="tt-item-desc">Cross-Platform Mobile Development</div>
                         </div>
                       </div>
                       <span className="tt-badge tt-badge--intermediate">Intermediate</span>
@@ -394,11 +394,11 @@ export default function App() {
                     <li className="tt-item">
                       <div className="tt-item-main tt-item-with-icon">
                         <div className="tt-icon">
-                          <img src={require('./assets/flutter.png')} alt="Flutter" />
+                          <img src={require('./assets/firebase.png')} alt="Firebase" />
                         </div>
                         <div>
-                          <div className="tt-item-name">Flutter</div>
-                          <div className="tt-item-desc">Cross-Platform Mobile Development</div>
+                          <div className="tt-item-name">Firebase</div>
+                          <div className="tt-item-desc">Hosting & Backend Platform</div>
                         </div>
                       </div>
                       <span className="tt-badge tt-badge--intermediate">Intermediate</span>
@@ -463,6 +463,19 @@ export default function App() {
                         <div>
                           <div className="tt-item-name">CSS</div>
                           <div className="tt-item-desc">Styling for Web Pages</div>
+                        </div>
+                      </div>
+                      <span className="tt-badge tt-badge--advanced">Advanced</span>
+                    </li>
+
+                    <li className="tt-item">
+                      <div className="tt-item-main tt-item-with-icon">
+                        <div className="tt-icon">
+                          <img src={require('./assets/javascript.png')} alt="JavaScript" />
+                        </div>
+                        <div>
+                          <div className="tt-item-name">JavaScript</div>
+                          <div className="tt-item-desc">Programming Language for Web Development</div>
                         </div>
                       </div>
                       <span className="tt-badge tt-badge--advanced">Advanced</span>
@@ -716,7 +729,7 @@ export default function App() {
             </p>  
             <div className="tags">
               <span className="chip">Flutter</span>
-              <span className="chip">Random</span>
+              <span className="chip">Dart</span>
               <span className="chip">GetStorage</span>
               <span className="chip">Share Plus</span>
               <span className="chip">Animation</span>
